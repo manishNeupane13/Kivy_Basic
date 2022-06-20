@@ -1,0 +1,328 @@
+Screen:
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+        
+
+        MDTabs:
+
+            MDTabsBase:
+                title: "Insert Section "
+                orientation:'vertical'
+                pos_hint: {"center_x": .5, "center_y": .5}
+                padding:15
+                spacing:15
+                BoxLayout:
+                    orientation:'vertical'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    padding:15
+                    spacing:15
+                    # size_hint:None,None
+                    # size:600,300
+                    MDCard:
+                        # pos_hint: {'center_x':0.5 ,'center_y':0.5 }
+                        elevation:10
+                        orientation: 'vertical' 
+                        spacing:30
+                        size_hint:None,None
+                        size:600,550
+                        MDTextField:
+                            id:location
+                            hint_text:"Location Name"
+                            #halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:route
+                            hint_text:"Route Name"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:keys
+                            hint_text:"Bus Stops Key"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:vals
+                            hint_text:"Bus Stops Value"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        GridLayout:
+                            cols:2
+                            spacing:40
+                            pos_hint:{'center_x':0.5 ,'center_y':0.5 }
+                            padding:20
+
+                            
+
+                            MDFillRoundFlatButton:
+                                text:"Insert"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.8}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.insert_db()
+                            MDFillRoundFlatButton:
+                                text:"Clear"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.5}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.clear()
+            Tab:
+                title: "Delete Section"
+                BoxLayout:
+                    orientation:'vertical'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    padding:15
+                    spacing:15
+                    # size_hint:None,None
+                    # size:600,300
+                    MDCard:
+                        pos_hint: {'center_x':0.5 ,'center_y':0.5 }
+                        elevation:10
+                        orientation: 'vertical' 
+                        spacing:30
+                        size_hint:None,None
+                        size:600,550
+                        MDTextField:
+                            id:location_name
+                            hint_text:"Location Name"
+                            #halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:route_name
+                            hint_text:"Route Name"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:stops_key
+                            hint_text:"Bus Stops Key"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:stops_val
+                            hint_text:"Bus Stops Value"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        GridLayout:
+                            cols:2
+                            spacing:40
+                            pos_hint:{'center_x':0.5 ,'center_y':0.5 }
+                            padding:20
+
+                            
+
+                            MDFillRoundFlatButton:
+                                text:"Insert"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.8}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.insert_db()
+                            MDFillRoundFlatButton:
+                                text:"Clear"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.5}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.clear()
+            Tab:
+                title: "Update Section"
+                BoxLayout:
+                    orientation:'vertical'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    padding:15
+                    spacing:15
+                    # size_hint:None,None
+                    # size:600,300
+                    MDCard:
+                        pos_hint: {'center_x':0.5 ,'center_y':0.5 }
+                        elevation:10
+                        orientation: 'vertical' 
+                        spacing:30
+                        size_hint:None,None
+                        size:600,550
+                        MDTextField:
+                            id:location_name
+                            hint_text:"Location Name"
+                            #halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:route_name
+                            hint_text:"Route Name"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:stops_key
+                            hint_text:"Bus Stops Key"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:stops_val
+                            hint_text:"Bus Stops Value"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        GridLayout:
+                            cols:2
+                            spacing:40
+                            pos_hint:{'center_x':0.5 ,'center_y':0.5 }
+                            padding:20
+
+                            
+
+                            MDFillRoundFlatButton:
+                                text:"Insert"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.8}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.insert_db()
+                            MDFillRoundFlatButton:
+                                text:"Clear"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.5}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.clear()
+
+            Tab:
+                title: "Search Section"
+                BoxLayout:
+                    orientation:'vertical'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    padding:15
+                    spacing:15
+                    # size_hint:None,None
+                    # size:600,300
+                    MDCard:
+                        pos_hint: {'center_x':0.5 ,'center_y':0.5 }
+                        elevation:10
+                        orientation: 'vertical' 
+                        spacing:30
+                        size_hint:None,None
+                        size:600,550
+                        MDTextField:
+                            id:location_name
+                            hint_text:"Location Name"
+                            #halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:route_name
+                            hint_text:"Route Name"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:stops_key
+                            hint_text:"Bus Stops Key"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        MDTextField:
+                            id:stops_val
+                            hint_text:"Bus Stops Value"
+                            # halign:"center"
+                            pos_hint: {'x':0.1 , 'y':0.25 }
+                            size_hint:0.80,0.2
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        GridLayout:
+                            cols:2
+                            spacing:40
+                            pos_hint:{'center_x':0.5 ,'center_y':0.5 }
+                            padding:20
+
+                            
+
+                            MDFillRoundFlatButton:
+                                text:"Insert"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.8}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.insert_db()
+                            MDFillRoundFlatButton:
+                                text:"Clear"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.5}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.clear()
+                
+

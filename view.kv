@@ -1,0 +1,120 @@
+Screen:
+    MDBoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title:"Database View"
+        MDTabs:
+            MDTabsBase:
+                title: "View Section "
+                # orientation:'vertical'
+                # pos_hint: {"center_x": .5, "center_y": .5}
+                # padding:15
+                # spacing:15
+                BoxLayout:
+                    orientation:'vertical'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    padding:15
+                    spacing:15
+                    # size_hint:None,None
+                    # size:600,300
+                    MDCard:
+                        # pos_hint: {'center_x':0.5 ,'center_y':0.5 }
+                        elevation:10
+                        orientation: 'vertical' 
+                        spacing:30
+                        size_hint:None,None
+                        size:600,550
+                        MDTextField:
+                            id:location
+                            hint_text:"Location Name"
+                            #halign:"center"
+                            pos_hint: {'x':0.1, 'y':0.25 }
+                            size_hint:0.80,None
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                        
+                        MDTextField:
+                            id:route
+                            hint_text:"Route Name"
+                            # halign:"center"
+                            pos_hint: {'x':0.1, 'y':0.25 }
+                            size_hint:0.80,None
+                            theme_text_custom:"Custom"
+                            font_size:22
+                            mode:'rectangle'
+                
+                        GridLayout:
+                            cols:2
+                            spacing:40
+                            pos_hint:{'center_x':0.5 ,'center_y':0.5 }
+                            padding:20
+
+                            
+
+                            MDFillRoundFlatButton:
+                                text:"Search"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.8}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.showTable()
+                            MDFillRoundFlatButton:
+                                text:"Clear"
+                                text_color:1,1,1,1
+                                font_size:22
+                                pos_hint: {'x':0.5}
+                                # size_hint:0.75,0.10
+                                mode:'rectangle'
+                                halign:'center'
+                                on_release: app.clear() 
+            MDTabsBase:
+    
+                orientation:'vertical'
+                title:'hello'
+                # pos_hint: {"center_x": .5, "center_y": .5}
+                # padding:15
+                # spacing:15
+                BoxLayout:
+                    orientation:'vertical'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    padding:15
+                    spacing:15
+                    size_hint:None,None
+                    size:700,750
+                    AnchorLayout:
+                        id:table_box
+                        anchor_x: 'center'
+                        anchor_y: 'center'
+            MDTabsBase:
+    
+                orientation:'vertical'
+                title:'DropDown'
+                # pos_hint: {"center_x": .5, "center_y": .5}
+                # padding:15
+                # spacing:15
+                FloatLayout:
+                    orientation:'vertical'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    padding:15
+                    spacing:15
+                    size_hint:None,None
+                    size:700,750
+                    MDDropDownItem:
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        id:drop_item
+                        dropdown_bg:(1,1,1,1)
+                        on_release:root.menu.open()
+
+                        # text:"Hello"
+                    
+
+                    
+                        
+                        
+                        
+                    
+                   
+                    
