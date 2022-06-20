@@ -1,0 +1,101 @@
+<MyLayout>
+    canvas:
+        Color:
+            rgba:222/255,183/255,200/255,1
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width,root.height
+        padding: 50
+        spacing:20
+        
+        BorderBox:
+            
+            id:label
+            font_size:18
+            color: 1 , 0.5, 0.25, 1
+            size_hint:0.15,0.7
+            width:100
+            height:100
+            Image:
+                source:'search_direction.png'
+                center_x:self.parent.center_x
+                center_y:self.parent.center_y
+                size:self.parent.texture_size
+        
+        BorderBox:
+            
+            id:label
+            font_size:18
+            # color: 1 , 0.5, 0.25, 1
+            # size_hint:0.15,0.7
+            width:100
+            height:100
+            Image:
+                source:'new_logo.png'
+                center_x:self.parent.center_x
+                center_y:self.parent.center_y
+                size:self.texture_size
+        
+        BorderBox:
+            
+            id:label
+            font_size:18
+            # color: 1 , 0.5, 0.25, 1
+            # size_hint:0.15,0.7
+            width:100
+            height:100
+            Image:
+                source:'Logo.png'
+                center_x:self.parent.center_x
+                center_y:self.parent.center_y
+                size:self.texture_size
+        
+            
+                
+
+        Button:
+            id:Btn_1
+            text:'button'
+            font_size:22
+            color: 1 , 0.5, 0.25, 1
+            size_hint:0.15,0.7
+            
+        
+    BoxLayout:
+        orientation: 'horizontal'
+        # size:root.width,root.height
+        pos:self.pos
+        padding: 50
+        spacing:20
+        
+        # BorderBox:
+        #     id:label
+        #     text:'hello world'
+        #     font_size:18
+        #     color: 1 , 0.5, 0.25, 1
+        #     size_hint:0.15,0.7
+        #     width:100
+        #     height:100
+        BorderBox:
+            id:label
+            text:'LABELLONG'
+            font_size:18
+            color: 1 , 0.5, 0.25, 1
+            size_hint:0.15,0.7
+            width:100
+            height:100
+      
+<BorderBox@Label>
+    
+    canvas.before:
+        Color:
+            rgba:0.6,0.25,0.5,1
+        RoundedRectangle:
+            size: self.size
+            pos:self.pos
+            radius:[12]
+            
+            

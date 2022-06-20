@@ -1,0 +1,53 @@
+#: import utils kivy.utils
+Screen:
+    user_name:user_name
+    user_password:user_password
+
+  
+    GridLayout:
+       
+        cols:2
+        background_color:utils.get_color_from_hex("#42f2f5")
+        padding: 25
+        spacing: 25
+        Label:
+            text:"UserName"
+            size_hint_x:None
+            size_hint_y:1
+        TextInput:
+            id:user_name
+            multiline:False
+            size_hint_x:5
+            size_hint_y:1
+        Label:
+            text:"PassWord"
+            size_hint_x:None
+            size_hint_y:1
+        TextInput:
+            id:user_password
+            multiline:False
+            size_hint_x:5
+            size_hint_y:1
+        Button:
+            text:"submit"
+            font_size:32
+            size_hint_x:1
+            size_hint_y:1
+            on_press:app.logger()
+            background_normal:""
+            background_color:utils.get_color_from_hex("#eefa00")
+        Button:
+            text:"Clear"
+            font_size:32
+            size_hint_x:1
+            size_hint_y:1
+            on_press:app.clear()
+            #setting normal color to null
+            background_normal:''
+            #takes rbg value from 0-1 range
+            background_color:(0.5,0.2,0.25,1)
+            #hex color codes
+
+
+
+            

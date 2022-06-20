@@ -1,0 +1,66 @@
+<MyLayout>
+    canvas:
+        Color:
+            rgba:0.2,0.3,0.5,1
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    # size_hint:0.5,0.4
+    # pos_hint: {'center_x': .5, 'center_y': .5}
+    do_default_tab:False
+    TabbedPanelItem:
+        text:"Tab 1"
+        BoxLayout:
+            canvas.before:
+                Color:
+                    rgba:0.2,0.3,0.5,1
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            Image:
+                source:"Logo.png"
+                center_x:self.parent.center_x
+                center_y:self.parent.center_y
+                # size_hint:None,None
+                # height:1
+                # width:1
+
+    TabbedPanelItem:
+        text:"Tab 2"
+        BoxLayout:
+            Label:
+                text:"Pres the button"
+            Button:
+                text:"Cleick me"
+                
+                    # ize:self.texture_size
+                    # pos_hint: {'center_x': .5, 'center_y': .5}
+    TabbedPanelItem:
+        text:"Tab 3"
+        Button:
+            canvas.before:
+                Color:
+                    rgba:0.2,0.3,0.5,1
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            background_normal:""
+            background_color:(0.2,0.3,0.5,1)
+            Image:
+                source:"search_direction.png"
+                center_x:self.parent.center_x
+                center_y:self.parent.center_y
+                # size:self.texture_size
+                # pos_hint: {'center_x': .5, 'center_y': .5}
+
+    
+    
+
+
+           
+         
+
+
+
+
+    

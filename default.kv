@@ -1,0 +1,44 @@
+# <Button>
+#     size_hint:(None,None)
+#     height:100
+#     width:100
+#     background_color:(71/255,237/255,193/255)
+#     color:"red"
+#     font_size:18
+#     pos_hint:{"center_x":0.5}
+
+
+# <DefaultDesign>
+# canvas.before: 
+#     Color:
+#         rgba:0.5,0.5,0.6,1
+#     Rectangle:
+#         pos:self.pos
+#         size:self.size
+Screen:
+
+    ScrollView:
+        do_scroll_x:False
+        do_scroll_y:True 
+        bar_color:0,0.5,0,1
+        scroll_type:['bars', 'content']
+        bar_width:20
+        BoxLayout:
+            orientation:'vertical'
+            size_hint_y:None
+            height:self.minimum_height
+            # spacing:0
+            # padding:20
+            Button:
+                text:"Button1" 
+            Button:
+                text:"Button2"
+            Button:
+                text:"Button3"
+                
+                    
+                
+                
+
+            
+

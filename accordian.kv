@@ -1,0 +1,42 @@
+
+<Mylayout>
+    id:widget_lay
+    BoxLayout:
+        orientation: 'vertical'
+        size:root.width,root.height
+
+        padding:50
+        spacing:20
+        Accordion:
+            orientation:'vertical'
+            AccordionItem:
+                title:"panel1"
+                Label:
+                    text:'panel1 txt'
+                    font_size: 23
+                    Image:
+                        source:'Logo.png'
+                        center_x:self.parent.center_x
+                        center_y:self.parent.center_y
+                        size:self.texture_size
+            AccordionItem:
+                title:"panel2"
+                Label:
+                    text:'panel2 txt'
+                    font_size: 30
+            AccordionItem:
+                title:"panel3"
+                Label:
+                    text:'panel3 txt'
+                    font_size: 28
+            AccordionItem:
+                title:"panel4"
+                Label:
+                    text:'panel4 txt'
+                    font_size: 23
+
+
+        
+        
+
+    

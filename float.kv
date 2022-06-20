@@ -1,0 +1,24 @@
+<Button>
+    font_size:13
+    size_hint: 0.3,0.5 
+<MyLayout>
+    FloatLayout:
+        size:root.width,root.height
+        padding: 20
+        spacing: 50
+        Button:
+            text:"Hello world !"
+            #x,y,top,bottom,left,right.
+            pos_hint: {'x':0 , 'top':1 }
+        Button:
+            text:"Hello world_R !"
+            pos_hint: {'x':0 , 'left':1 }
+        Button:
+            text:"Hello world_L !"
+            pos_hint: {'top':1 , 'right':1 }
+        Button:
+            text:"Hello world_B !"
+            pos_hint: {'x':0.7 , 'bottom':0.7 }
+        Button:
+            text:"Hello world_C !"
+            pos_hint: {'x':0.35, 'y':0.2 }

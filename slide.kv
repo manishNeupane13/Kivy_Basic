@@ -1,0 +1,19 @@
+<Mylayout>
+    id:widget_lay
+    BoxLayout:
+        orientation: 'vertical'
+        size:root.width,root.height
+
+        padding:50
+        spacing:20
+        Label:
+            id:label_demo
+            text:'Slider Demo'
+        Slider:
+            min:1
+            max:70
+            step:2
+            orientation:"horizontal"
+            on_value:root.slide_it(*args)
+
+    

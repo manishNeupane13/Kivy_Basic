@@ -1,0 +1,40 @@
+<Info>:
+    size_hint_y: None
+    height: 48
+    Label:
+        text: root.label_text
+        size_hint:None,None
+        height:10022225.
+        width:100
+    # Button:
+    #     text: root.button_text
+    #     on_release: print(f'Button: {self.text} pressed')
+
+
+
+<MyLayout>
+
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+        id:box1
+        Label:
+            id:label_name
+            font_size:12
+            color:"red"
+            text:"HELLO WORLD"
+
+        # BoxLayout:
+        #     orientation:"horizontal"
+        #     size:root.width,root.height
+        #     id:box1
+        #     size_hint_y: None
+        #     height: self.minimum_height
+
+        #    
+        #     Button:
+        #         id:click
+        #         text:'submit'
+        #         background_color:(0.25,0.35,0.65,1)
+                # on_press:root.on_start()
+                

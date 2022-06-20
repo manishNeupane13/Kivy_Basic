@@ -1,0 +1,57 @@
+<Layoutdesign>
+    canvas:
+        Color:
+            rgba:255,255,255,1
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+    BoxLayout:
+        size:root.width,root.height
+        orientation: 'horizontal'
+        spacing:20
+        padding:20
+        
+        Button:
+            text:"Submit"
+            background_normal:""
+            background_color:(71/255,237/255,193/255)
+            size_hint_x:0.75
+            size_hint_y:0.75
+        Button:
+            text:"Submit1"
+            background_normal:""
+            background_color:(71/255,237/255,193/255)
+            size_hint_x:0.75
+            size_hint_y:0.75
+        Button:
+            text:"Submit2" 
+            background_normal:""
+            background_color:(71/255,237/255,193/255)
+            size_hint_x:0.75
+            size_hint_y:0.75
+        BoxLayout:
+            orientation:'vertical'
+            spacing:10
+            Button:
+                text:"Inside Submit"
+                background_normal:""
+                background_color:(71/255,237/255,193/255)
+                size_hint_x:0.75
+                size_hint_y:0.75
+            Button:
+                text:"Inside Submit1"
+                color:"yellow"
+                font_size:18
+                background_normal:""
+                size_hint_x:0.6
+                size_hint_y:0.15
+                background_color:(71/255,237/255,193/255)
+            Button:
+                text:"inside Submit"
+                font_size:18
+                color:"red" 
+                background_normal:""
+                background_color:(71/255,237/255,193/255)
+                size_hint_x:0.6
+                size_hint_y:0.15

@@ -1,0 +1,37 @@
+<MyLayout>
+    BoxLayout:
+        orientation:'vertical'
+        size: root.width,root.height
+        Splitter:
+            sizable_from:'bottom'
+            Button:
+                text: 'Hello '
+                font_size: 32
+        GridLayout:
+            cols:3
+            # Splitter:
+            #     sizable_from:'left'
+            Label:
+                text: 'Label Text'
+                font_size: 32
+            Splitter:
+                sizable_from:'left'
+                Label:
+                    text: 'Right Text'
+                    font_size:32
+            Splitter:
+                sizable_from:'left'
+                Button:
+                    text: 'inside grid'
+                    font_size: 32
+        
+        Splitter:
+            sizable_from:'top'            
+            Button:
+                text:"Bottom"
+                font_size:32
+
+
+
+
+    
